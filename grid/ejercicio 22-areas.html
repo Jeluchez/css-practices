@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: radial-gradient(circle, #ffffaa, #b1b106);
+            margin: 0;
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: 150px repeat(2, 1fr);
+            grid-template-areas:
+                "header header header"
+                "aside section section"
+                "footer footer ."
+        }
+
+        .main>* {
+            padding: 0.75rem;
+        }
+
+        .header,
+        .footer {
+            padding: 2rem 0;
+            text-align: center;
+            background: peru;
+        }
+
+        .header {
+            grid-area: header;
+        }
+
+        .aside {
+            grid-area: aside;
+            display: flex;
+            padding: 0 2rem;
+            align-items: center;
+            justify-content: center;
+            background: pink;
+        }
+
+        .section {
+            grid-area: section;
+            background: blue;
+            color: #fff;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <header class="header">HEADER</header>
+        <aside class="aside">ASIDE</aside>
+        <section class="section">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut consequatur ipsum ullam
+            ea. Ipsum unde
+            molestiae recusandae ipsam maxime, blanditiis, voluptatibus dolorem perferendis alias doloremque sit
+            voluptatem nostrum provident saepe?</section>
+        <footer class="footer">FOOTER</footer>
+    </div>
+</body>
+
+</html>

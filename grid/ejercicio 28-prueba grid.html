@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: radial-gradient(circle, #ffffaa, #b1b106);
+            margin: 0;
+            height: 100vh;
+        }
+
+        .wrapper {
+            background: #fff;
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            grid-template-rows: 100px 1fr 100px;
+            height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            grid-column: 1 / -1;
+        }
+
+        aside {
+            background: green;
+            grid-column: span 1;
+            grid-row: 2 / -1;
+            background: green;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-auto-rows: 300px;
+            grid-auto-flow: dense;
+            gap: 5px;
+            padding: 1rem;
+            align-items: center;
+            justify-content: center;
+            overflow-y: auto;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        footer {
+            text-align: center;
+            grid-column: 1 / -1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>GALLERY TEST</header>
+        <aside>ASIDE</aside>
+        <div class="gallery">
+            <img src="images/1.jpeg" alt="">
+            <img src="images/2.jpeg" alt="">
+            <img src="images/3.jpeg" alt="">
+            <img src="images/4.jpeg" alt="">
+            <img src="images/5.jpeg" alt="">
+            <img src="images/6.jpeg" alt="">
+            <img src="images/7.jpeg" alt="">
+            <img src="images/8.jpeg" alt="">
+            <img src="images/9.jpeg" alt="">
+            <img src="images/10.jpeg" alt="">
+            <img src="images/11.jpeg" alt="">
+            <img src="images/12.jpeg" alt="">
+        </div>
+        <footer class="footer">Este es el footer</footer>
+    </div>
+</body>
+
+</html>
